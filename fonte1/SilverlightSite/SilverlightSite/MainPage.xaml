@@ -4,12 +4,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="768" d:DesignWidth="1366">
-
-    <Grid x:Name="LayoutRoot" >
+    Height="768" Width="1366" >
+    
+    <Grid x:Name="LayoutRoot" >              
         <Grid.Background>
-            <ImageBrush ImageSource="C:/Users/Pierre/Desktop/Trabalho FAS II/site/imagens/bg-intro-circles.jpg"/>
+            <ImageBrush ImageSource="imagem/bg-intro-circles.jpg"/>
+            
         </Grid.Background>
-        <Button x:Name="btnVideo" Content="Button" HorizontalAlignment="Left" Margin="650,368,0,0" VerticalAlignment="Top" Width="75" Click="btnVideo_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="820,273,0,0" VerticalAlignment="Top" Width="546" Height="167" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0.01"/>
+        <Canvas x:Name="Cover" Height="768" Width="1366" Background="#FF131212" Opacity="0.01" >
+           
+        </Canvas>
+        <Image Canvas.Left="92" Canvas.Top="616" Source="imagem/menu.png" Margin="-53,550,1122,10">
+            <Image.OpacityMask>
+                <ImageBrush Stretch="Fill" ImageSource="imagem/menu.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btnPrincipal" Content="Button" HorizontalAlignment="Left" Height="182" Margin="0,576,0,0" VerticalAlignment="Top" Width="203" Opacity="0.01" Click="btnPrincipal_Click"/>
     </Grid>
+    
+
 </UserControl>
+
+    

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SilverLight" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=KOLINS\SQL2005;Initial Catalog=SilverLight;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SilverLightConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbAluno" Member="tbAlunos">
+    <Type Name="tbAluno">
+      <Column Name="idAluno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nota" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="idCurso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbAluno_tbDisciplina" Member="tbDisciplinas" ThisKey="idAluno" OtherKey="idAluno" Type="tbDisciplina" />
+      <Association Name="tbAluno_tbFinanceiro" Member="tbFinanceiros" ThisKey="idAluno" OtherKey="idaluno" Type="tbFinanceiro" />
+      <Association Name="tbCurso_tbAluno" Member="tbCurso" ThisKey="idCurso" OtherKey="idCurso" Type="tbCurso" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbCurso" Member="tbCursos">
+    <Type Name="tbCurso">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbCurso_tbAluno" Member="tbAlunos" ThisKey="idCurso" OtherKey="idCurso" Type="tbAluno" />
+      <Association Name="tbCurso_tbDisciplina" Member="tbDisciplinas" ThisKey="idCurso" OtherKey="idCurso" Type="tbDisciplina" />
+      <Association Name="tbCurso_tbProfessor" Member="tbProfessors" ThisKey="idCurso" OtherKey="idCurso" Type="tbProfessor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDisciplina" Member="tbDisciplinas">
+    <Type Name="tbDisciplina">
+      <Column Name="idDisciplina" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idAluno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCurso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idProfessor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbAluno_tbDisciplina" Member="tbAluno" ThisKey="idAluno" OtherKey="idAluno" Type="tbAluno" IsForeignKey="true" />
+      <Association Name="tbCurso_tbDisciplina" Member="tbCurso" ThisKey="idCurso" OtherKey="idCurso" Type="tbCurso" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbFinanceiro" Member="tbFinanceiros">
+    <Type Name="tbFinanceiro">
+      <Column Name="idFinanceiro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mes" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pago" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="idaluno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbAluno_tbFinanceiro" Member="tbAluno" ThisKey="idaluno" OtherKey="idAluno" Type="tbAluno" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbProfessor" Member="tbProfessors">
+    <Type Name="tbProfessor">
+      <Column Name="idProfessor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idCurso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbCurso_tbProfessor" Member="tbCurso" ThisKey="idCurso" OtherKey="idCurso" Type="tbCurso" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

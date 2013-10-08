@@ -15,6 +15,7 @@ namespace SilverlightSite
 {
     public partial class Page1 : Page
     {
+        Boolean teste = true;
         public Page1()
         {
             InitializeComponent();
@@ -25,13 +26,28 @@ namespace SilverlightSite
         {
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnPlayPause_Click(object sender, RoutedEventArgs e)
         {
-            MainPage mp = new MainPage();
-            LayoutRoot.Children.Clear();
-            LayoutRoot.Children.Add(mp);
+            if (teste)
+            {
+                media.Pause();
+                teste = false;
+            }
+            else
+            {
+                media.Play();
+                teste = true;
+            }
+
 
         }
+
+        private void btnReload_Click(object sender, RoutedEventArgs e)
+        {
+            media.Stop();
+            media.Play();
+            teste = true;
+        }      
 
     }
 }

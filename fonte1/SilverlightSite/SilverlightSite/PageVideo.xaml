@@ -6,12 +6,20 @@
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
            xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="SilverlightSite.Page1"
            mc:Ignorable="d"
-           d:DesignWidth="640" d:DesignHeight="480"
+           d:DesignWidth="1366" d:DesignHeight="768"
            Title="Page1 Page">
     <Grid x:Name="LayoutRoot">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="245,203,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-
-        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="178,103,0,0" VerticalAlignment="Top" Width="120" Content="Página Vídeo"/>
-
+        <Image HorizontalAlignment="Left" Height="55" Margin="149,68,0,0" VerticalAlignment="Top" Width="71" Source="imagem/reload.png"/>
+        <Image HorizontalAlignment="Left" Height="63" Margin="48,65,0,0" VerticalAlignment="Top" Width="100" Source="imagem/playpause.png"/>
+        <sdk:Label HorizontalAlignment="Center" Height="64" Margin="185,29,704,0" VerticalAlignment="Top" Width="477" Content="Página de Video..." FontSize="48" RenderTransformOrigin="0.5,0.5" Foreground="Yellow">
+            <sdk:Label.RenderTransform>
+                <CompositeTransform/>
+            </sdk:Label.RenderTransform>
+        </sdk:Label>
+        <MediaElement x:Name="media"         
+    		Source="video/PUC2014.wmv" Margin="24,125,907,458" />
+        <Button x:Name="btnReload" Content="Replay" HorizontalAlignment="Left" Margin="153,65,0,0" VerticalAlignment="Top" Width="62" Click="btnReload_Click" Background="{x:Null}" Height="55" Opacity="0.01"/>
+        <Button x:Name="btnPlayPause" Content="Play/Pause" HorizontalAlignment="Left" Margin="61,65,0,0" VerticalAlignment="Top" Width="71" Click="btnPlayPause_Click" RenderTransformOrigin="1,0.5" Height="55" Background="{x:Null}" Opacity="0.01"/>
     </Grid>
+
 </navigation:Page>
