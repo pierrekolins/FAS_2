@@ -33,13 +33,13 @@ namespace SilverlightSite
         private double _xCenter;
         private double _yCenter;
 
-        private double _target = 0;		// Target moving position
+        private double _target = 0;		// Alvo da mudança posição
         private double _current = 0;	// Posição corrente
-        private double _spring = 0;		// Temp used to store last moving 
-        private List<Image> _images = new List<Image>();	// Store the added images
+        private double _spring = 0;		// Guarda ultimo movimento
+        private List<Image> _images = new List<Image>();	// Imagens adicionadas
 
-        private static int FPS = 24;                // fps frame event (delay de mudança)
-        private DispatcherTimer _timer = new DispatcherTimer(); // on enter frame simulator
+        private static int FPS = 24;                // fps frame (delay de mudança)
+        private DispatcherTimer _timer = new DispatcherTimer(); 
 
         public Page6()
         {
@@ -53,10 +53,7 @@ namespace SilverlightSite
 
             lbName.Content = "Alunos"; // default
 
-            // add the click handler
-  //          this.MouseLeftButtonDown += new MouseButtonEventHandler(ImageNaigation_MouseLeftButtonDown);
-
-            // add the scroll handler
+           // adiciona o scroll handler
             HtmlPage.Window.AttachEvent("DOMMouseScroll", OnMouseWheel);
             HtmlPage.Window.AttachEvent("onmousewheel", OnMouseWheel);
             HtmlPage.Document.AttachEvent("onmousewheel", OnMouseWheel);
@@ -71,7 +68,7 @@ namespace SilverlightSite
         // Handlers 
         /////////////////////////////////////////////////////	
 
-        // reposition the images
+        // imagens
         void _timer_Tick(object sender, EventArgs e)
         {
             for (int i = 0; i < _images.Count; i++)
@@ -81,13 +78,13 @@ namespace SilverlightSite
             }
 
 
-            // compute the current position
-            // added spring effect
+            // corrente posição
+            // adiciona efeito spring
             _spring = (_target - _current) * SPRINESS + _spring * DECAY;
             _current += _spring;
         }
 
-        // define the new target by mouse wheel
+        // mouse wheel
         private void OnMouseWheel(object sender, HtmlEventArgs args)
         {
 
@@ -109,7 +106,7 @@ namespace SilverlightSite
         }
 
 
-        // define the new target by mouse click (Forward position only)
+        // define o novo tragetoria do mouse (Forward)
         void ImageNaigation_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
            // moveIndex(1);
@@ -125,12 +122,12 @@ namespace SilverlightSite
         {
             for (int i = 0; i < IMAGES.Length; i++)
             {
-                // get the image resources from the xap
+                // pega a imagem encontrada
                 string url = IMAGES[i];
                 Image image = new Image();
                 image.Source = new BitmapImage(new Uri(url, UriKind.Relative));
 
-                // add and reposition the image
+                // adiciona e reposiciona a imagem
                 LayoutRoot.Children.Add(image);
                 posImage(image, i);
                 _images.Add(image);
@@ -167,20 +164,20 @@ namespace SilverlightSite
             }
         }
 
-        // reposition the image
+        // reposição da imagem
         private void posImage(Image image, int index)
         {
             double diffFactor = index - _current;
 
 
-            // scale and position the image according to their index and current position
-            // the one who closer to the _current has the larger scale
+            // escala e posição da imagem conforme a index dela e corrente posição
+            // mais perto será maior
             ScaleTransform scaleTransform = new ScaleTransform();
             scaleTransform.ScaleX = MAX_SCALE - Math.Abs(diffFactor) * SCALE_DOWN_FACTOR;
             scaleTransform.ScaleY = MAX_SCALE - Math.Abs(diffFactor) * SCALE_DOWN_FACTOR;
             image.RenderTransform = scaleTransform;
 
-            // reposition the image
+            // reposição da imagem
             double left = _xCenter - (IMAGE_WIDTH * scaleTransform.ScaleX) / 2 + diffFactor * OFFSET_FACTOR;
             double top = _yCenter - (IMAGE_HEIGHT * scaleTransform.ScaleY) / 2;
             image.Opacity = 1 - Math.Abs(diffFactor) * OPACITY_DOWN_FACTOR;
@@ -188,7 +185,7 @@ namespace SilverlightSite
             image.SetValue(Canvas.LeftProperty, left);
             image.SetValue(Canvas.TopProperty, top);
 
-            // order the element by the scaleX
+            // ordem do elemento pela scaleX
             image.SetValue(Canvas.ZIndexProperty, (int)Math.Abs(scaleTransform.ScaleX * 100));
         }
 
@@ -196,10 +193,10 @@ namespace SilverlightSite
         // Public Methods
         /////////////////////////////////////////////////////	
 
-        // start the timer
+        // inicia o timer
         public void Start()
         {
-            // start the enter frame event
+            // inicia o evento frame 
             _timer = new DispatcherTimer();
             _timer.Interval = new TimeSpan(0, 0, 0, 0, 1000 / FPS);
             _timer.Tick += new EventHandler(_timer_Tick);

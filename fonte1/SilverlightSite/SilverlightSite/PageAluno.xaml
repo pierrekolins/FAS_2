@@ -10,11 +10,11 @@
            Height="768" Width="1366" 
            Title="Page4 Page">
     <Grid x:Name="LayoutRoot">
-        <sdk:Label HorizontalAlignment="Left" Height="42" Margin="160,25,0,0" VerticalAlignment="Top" Width="162" Foreground="#FFF5EBEB" Content="Alunos" FontSize="24"/>
+        <sdk:Label HorizontalAlignment="Left" Height="66" Margin="530,39,0,0" VerticalAlignment="Top" Width="170" Foreground="#FFF5EBEB" Content="Alunos" FontSize="48"/>
         <data:DataGrid x:Name = "AlunoGrid"
-          RowBackground="LightYellow"
-          AlternatingRowBackground="LightBlue"             
-          Margin="154,124,720,294" Background="{x:Null}" FontSize="14" BorderBrush="{x:Null}">
-       </data:DataGrid>
+          RowBackground="{x:Null}"
+          AlternatingRowBackground="{x:Null}"             
+          Margin="228,158,368,260" Background="{x:Null}" FontSize="24" BorderBrush="{x:Null}" Foreground="#FFF5EBEB">
+        </data:DataGrid>
     </Grid>
 </navigation:Page>

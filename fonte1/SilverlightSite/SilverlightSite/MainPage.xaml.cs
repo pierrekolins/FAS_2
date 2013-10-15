@@ -21,10 +21,6 @@ namespace SilverlightSite
         {
             InitializeComponent();
 
-            // add the controls to the back
-           // _carrossel = new Page6();
-           // LayoutRoot.Children.Insert(0, _carrossel);
-
             // click para remover o cover
 
             Cover.MouseLeftButtonDown += new MouseButtonEventHandler(Cover_MouseLeftButtonDown);           

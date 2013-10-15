@@ -20,7 +20,7 @@ namespace SilverlightSite
         public Page4()
         {
             InitializeComponent();
-            AlunoGrid.ItemsSource = DadosAlunos();
+            AlunoGrid.ItemsSource = DadosAlunos(); // Cria o Grid
 
         }
 

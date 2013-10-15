@@ -9,24 +9,24 @@
            Height="768" Width="1366" 
            xmlns:sys="clr-namespace:System;assembly=mscorlib" 
            xmlns:local="clr-namespace:SilverlightSite" 
-    Title="Page2 Page">  
+    Title="Page2 Page" Foreground="#FFF5EBEB">
     <Grid x:Name="LayoutRoot">
         <Grid.Resources>
             <local:Frequencia x:Key="DadosFrequencia" />
         </Grid.Resources>
-        <toolkit:Chart Margin="89,108,135,80" BorderBrush="{x:Null}" Title="">
+        <toolkit:Chart Margin="119,79,167,114" BorderBrush="{x:Null}" Foreground="#FF191818">
             <toolkit:Chart.Series>
                 <toolkit:PieSeries IsSelectionEnabled="True"
-                    Title="Frequência Curso"
                     ItemsSource="{StaticResource DadosFrequencia}"
-                    IndependentValueBinding="{Binding Path=mes}"
-                    DependentValueBinding="{Binding total}" Margin="48,62,94,22"/>
+                    IndependentValueBinding="{Binding Path=mes}" 
+                    DependentValueBinding="{Binding total}" Margin="10,0,6,-6" Foreground="{x:Null}"/>
             </toolkit:Chart.Series>
         </toolkit:Chart>
-        <sdk:Label HorizontalAlignment="Center" Height="64" Margin="126,10,37,0" VerticalAlignment="Top" Width="477" Content="Gráfico" FontSize="48" RenderTransformOrigin="0.5,0.5" Foreground="#FFF5EBEB">
+        <sdk:Label HorizontalAlignment="Center" Height="64" Margin="387,15,502,0" VerticalAlignment="Top" Width="477" Content="Gráfico" FontSize="48" RenderTransformOrigin="0.5,0.5" Foreground="#FFF5EBEB">
             <sdk:Label.RenderTransform>
                 <CompositeTransform/>
             </sdk:Label.RenderTransform>
-        </sdk:Label>                
-    </Grid>    
+        </sdk:Label>
+        <sdk:Label HorizontalAlignment="Left" Height="46" Margin="238,84,0,0" VerticalAlignment="Top" Width="732" Content="Média de Presença - Turma X - Curso Y" FontSize="36" Foreground="#FFF5EBEB"/>
+    </Grid>
 </navigation:Page>

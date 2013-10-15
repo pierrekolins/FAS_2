@@ -39,9 +39,16 @@ namespace SilverlightSite
  {
      public IEnumerator<DadosFrequencia> GetEnumerator()
      {
-         yield return new DadosFrequencia { mes = "Agosto", total = 75 };
-         yield return new DadosFrequencia { mes = "Setembro", total = 80 };
-         yield return new DadosFrequencia { mes = "Outubro", total = 90 };
+         yield return new DadosFrequencia { mes = "Janeiro", total = 0 };
+         yield return new DadosFrequencia { mes = "Fevereiro", total = 85 };
+         yield return new DadosFrequencia { mes = "Março", total = 95 };
+         yield return new DadosFrequencia { mes = "Abril", total = 73 };
+         yield return new DadosFrequencia { mes = "Maio", total = 98 };
+         yield return new DadosFrequencia { mes = "Junho", total = 80 };
+         yield return new DadosFrequencia { mes = "Julho", total = 70 };
+         yield return new DadosFrequencia { mes = "Agosto", total = 95 };
+         yield return new DadosFrequencia { mes = "Setembro", total = 70 };
+         yield return new DadosFrequencia { mes = "Outubro", total = 100 };
          yield return new DadosFrequencia { mes = "Novembro", total = 85 };
          yield return new DadosFrequencia { mes = "Dezembro", total = 70 };
      }

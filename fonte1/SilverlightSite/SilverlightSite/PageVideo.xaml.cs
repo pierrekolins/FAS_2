@@ -15,7 +15,8 @@ namespace SilverlightSite
 {
     public partial class Page1 : Page
     {
-        Boolean teste = true;
+        Boolean teste = true; // está em "play"
+
         public Page1()
         {
             InitializeComponent();

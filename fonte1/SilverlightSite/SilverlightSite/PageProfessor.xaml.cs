@@ -28,16 +28,15 @@ namespace SilverlightSite
             //Cria coleção
             MinhaColecao = new ObservableCollection<Prof>();
 
-            //Create each object in the collection
+            //Cria o objeto a coleção
             Prof Marco = new Prof("Marco", "marco.jpg");
             Prof Pasteur = new Prof("Pasteur", "pasteur.jpg");
            
-            //Add the objects to the collection
+            //Adiciona objetos a coleção
             MinhaColecao.Add(Marco);
             MinhaColecao.Add(Pasteur);
            
-            //LayoutRoot is the name of the root Grid
-            LayoutProf.DataContext = MinhaColecao;
+            LayoutProf.DataContext = MinhaColecao; // recebe a coleção
 
             
         }
@@ -74,9 +73,6 @@ namespace SilverlightSite
         
         
     }
-
-
-
 
     public class Prof
     {

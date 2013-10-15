@@ -22,7 +22,7 @@ namespace SilverlightSite
             InitializeComponent();
             
             _carrossel = new Page6();            
-            LayoutRoot.Children.Insert(0, _carrossel);
+            LayoutRoot.Children.Insert(0, _carrossel); // insere o carrossel
             _carrossel.Start();
         }
 
@@ -32,6 +32,7 @@ namespace SilverlightSite
         }
         private void btnPrincipal_Click(object sender, RoutedEventArgs e)
         {            
+            // limpa children 
             PageReturn pr = new PageReturn();
             LayoutRoot.Children.Clear();
             LayoutRoot.Children.Add(pr);            
