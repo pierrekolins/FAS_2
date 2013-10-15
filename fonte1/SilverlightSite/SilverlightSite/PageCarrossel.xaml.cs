@@ -51,6 +51,8 @@ namespace SilverlightSite
 
             addImages();
 
+            lbName.Content = "Alunos"; // default
+
             // add the click handler
   //          this.MouseLeftButtonDown += new MouseButtonEventHandler(ImageNaigation_MouseLeftButtonDown);
 
@@ -142,26 +144,26 @@ namespace SilverlightSite
             _target = Math.Max(0, _target);
             _target = Math.Min(_images.Count - 1, _target);          
             numImagem = _target;
-            // Imagens 0 - mão(); 1 - video(video); 2 - vidro(gráficos); 3 - bandeira(); 4 - círculo(disciplina)
-            if (numImagem == 0) // ??
+            // Imagens 0 - setas(alunos); 1 - video(video); 2 - vidro(professor); 3 - bandeira(gráfico); 4 - círculo(disciplina)
+            if (numImagem == 0) // alunos
             {
-                lbName.Content = "...";
+                lbName.Content = "Alunos";
             }
             if (numImagem == 1) // Vídeo
             {
                 lbName.Content = "Vídeo";
             }
-            if (numImagem == 2) // gráfico
+            if (numImagem == 2) // professor
             {
-                lbName.Content = "Gráfico";
+                lbName.Content = "Professores";
             }
-            if (numImagem == 3) // ??
+            if (numImagem == 3) // gráfico
             {
-                lbName.Content = "...";
+                lbName.Content = "Gráfico";                
             }
             if (numImagem == 4) // disciplina
             {
-                lbName.Content = "Disciplina";
+                lbName.Content = "Disciplinas";
             }
         }
 
@@ -231,51 +233,52 @@ namespace SilverlightSite
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-           // Imagens 0 - mão(); 1 - video(video); 2 - vidro(gráficos); 3 - bandeira(); 4 - círculo(disciplina)
-            if (numImagem == 0) // Pagina de ???
+            Carrossel.Children.Remove(LayoutRoot);
+            // Imagens 0 - setas(alunos); 1 - video(video); 2 - vidro(professor); 3 - bandeira(gráficos); 4 - círculo(disciplina)
+            if (numImagem == 0) // Pagina de Alunos
             {
                 Page4 pg = new Page4();
 
-                LayoutRoot.Children.Clear();
+                Carrossel.Children.Clear();
 
-                LayoutRoot.Children.Add(pg);
+                Carrossel.Children.Add(pg);
             }
 
-            if (numImagem == 1 ) // Pagina de Video
+            if (numImagem == 1) // Pagina de Video
             {
                 Page1 pg = new Page1();
 
-                LayoutRoot.Children.Clear();
+               Carrossel.Children.Clear();
 
-                LayoutRoot.Children.Add(pg);
+               Carrossel.Children.Add(pg);
             }
 
-            if (numImagem == 2) // Pagina de gráfico
-            {
-                Page2 pg = new Page2();
-
-                LayoutRoot.Children.Clear();
-
-                LayoutRoot.Children.Add(pg);
-            }
-
-            if (numImagem == 3) // Pagina de ???
+            if (numImagem == 2) // Pagina de professor
             {
                 Page5 pg = new Page5();
 
-                LayoutRoot.Children.Clear();
+                Carrossel.Children.Clear();
 
-                LayoutRoot.Children.Add(pg);
+                Carrossel.Children.Add(pg);
+            }
+
+            if (numImagem == 3) // Pagina de gráfico
+            {
+                Page2 pg = new Page2();
+
+                Carrossel.Children.Clear();
+
+                Carrossel.Children.Add(pg);
             }
 
             if (numImagem == 4) // Pagina de disciplina
             {
                 Page3 pg = new Page3();
 
-                LayoutRoot.Children.Clear();
+                Carrossel.Children.Clear();
 
-                LayoutRoot.Children.Add(pg);
-            }            
+                Carrossel.Children.Add(pg);
+            }
         }
 
     }

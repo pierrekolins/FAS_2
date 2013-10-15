@@ -128,7 +128,7 @@ namespace SilverlightSite.Web
 		
 		private string _nome;
 		
-		private System.Nullable<double> _nota;
+		private System.Nullable<float> _nota;
 		
 		private System.Nullable<int> _idCurso;
 		
@@ -201,7 +201,7 @@ namespace SilverlightSite.Web
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nota", DbType="Float")]
-		public System.Nullable<double> nota
+		public System.Nullable<float> nota
 		{
 			get
 			{

@@ -3,6 +3,6 @@
              x:Class="SilverlightSite.App"
              >
     <Application.Resources>
-        
+      
     </Application.Resources>
 </Application>

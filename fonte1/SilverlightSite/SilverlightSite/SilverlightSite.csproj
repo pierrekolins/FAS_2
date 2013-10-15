@@ -72,6 +72,7 @@
     <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="system.windows.controls.datavisualization.toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -85,11 +86,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page4.xaml.cs">
-      <DependentUpon>Page4.xaml</DependentUpon>
+    <Compile Include="PageAluno.xaml.cs">
+      <DependentUpon>PageAluno.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page5.xaml.cs">
-      <DependentUpon>Page5.xaml</DependentUpon>
+    <Compile Include="PageDados.xaml.cs">
+      <DependentUpon>PageDados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageProfessor.xaml.cs">
+      <DependentUpon>PageProfessor.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageCarrossel.xaml.cs">
       <DependentUpon>PageCarrossel.xaml</DependentUpon>
@@ -99,6 +103,9 @@
     </Compile>
     <Compile Include="PageGrafico.xaml.cs">
       <DependentUpon>PageGrafico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageReturn.xaml.cs">
+      <DependentUpon>PageReturn.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageVideo.xaml.cs">
       <DependentUpon>PageVideo.xaml</DependentUpon>
@@ -137,13 +144,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Page4.xaml">
+    <Page Include="PageAluno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Page5.xaml">
+    <Page Include="PageProfessor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,6 +193,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagem\playpause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PageReturn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\inicial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PageDados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\marco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\pasteur.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

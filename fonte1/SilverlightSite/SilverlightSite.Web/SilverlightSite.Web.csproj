@@ -67,7 +67,9 @@
     <Content Include="Silverlight.js" />
     <Content Include="SilverlightSiteTestPage.aspx" />
     <Content Include="SilverlightSiteTestPage.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataClasses1.designer.cs">
@@ -94,6 +96,7 @@
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

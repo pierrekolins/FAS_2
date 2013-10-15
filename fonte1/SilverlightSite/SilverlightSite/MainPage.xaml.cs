@@ -15,32 +15,31 @@ namespace SilverlightSite
     public partial class MainPage : UserControl
     {
 
-        Page6 _carrossel;
+        PageReturn _pagereturn;
+
         public MainPage()
         {
             InitializeComponent();
 
             // add the controls to the back
-            _carrossel = new Page6();
-            LayoutRoot.Children.Insert(0, _carrossel);
+           // _carrossel = new Page6();
+           // LayoutRoot.Children.Insert(0, _carrossel);
 
             // click para remover o cover
-            Cover.MouseLeftButtonDown += new MouseButtonEventHandler(Cover_MouseLeftButtonDown);
+
+            Cover.MouseLeftButtonDown += new MouseButtonEventHandler(Cover_MouseLeftButtonDown);           
           
         }
-
+   
         void Cover_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            _pagereturn = new PageReturn();
             LayoutRoot.Children.Remove(Cover);
-            _carrossel.Start();
+            LayoutRoot.Children.Remove(imagemInicial);
+            LayoutRoot.Children.Remove(lbAcesse);
+            LayoutRoot.Children.Add(_pagereturn);
         }
-
-        private void btnPrincipal_Click(object sender, RoutedEventArgs e)
-        {
-            MainPage mp = new MainPage();
-            LayoutRoot.Children.Clear();
-            LayoutRoot.Children.Add(mp);
-        }
+               
 
     }
 }

@@ -6,18 +6,18 @@
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
            xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="SilverlightSite.Page1"
            mc:Ignorable="d"
-           d:DesignWidth="1366" d:DesignHeight="768"
+           Width="1366" Height="768"
            Title="Page1 Page">
     <Grid x:Name="LayoutRoot">
         <Image HorizontalAlignment="Left" Height="55" Margin="149,68,0,0" VerticalAlignment="Top" Width="71" Source="imagem/reload.png"/>
         <Image HorizontalAlignment="Left" Height="63" Margin="48,65,0,0" VerticalAlignment="Top" Width="100" Source="imagem/playpause.png"/>
-        <sdk:Label HorizontalAlignment="Center" Height="64" Margin="185,29,704,0" VerticalAlignment="Top" Width="477" Content="Página de Video..." FontSize="48" RenderTransformOrigin="0.5,0.5" Foreground="Yellow">
+        <sdk:Label HorizontalAlignment="Center" Height="64" Margin="389,45,260,0" VerticalAlignment="Top" Width="717" Content="Vestibular 2014 PUC Minas" FontSize="48" RenderTransformOrigin="0.5,0.5" Foreground="#FFF5EBEB">
             <sdk:Label.RenderTransform>
                 <CompositeTransform/>
             </sdk:Label.RenderTransform>
         </sdk:Label>
         <MediaElement x:Name="media"         
-    		Source="video/PUC2014.wmv" Margin="24,125,907,458" />
+    		Source="video/PUC2014.wmv" Margin="0,125,0,0" />
         <Button x:Name="btnReload" Content="Replay" HorizontalAlignment="Left" Margin="153,65,0,0" VerticalAlignment="Top" Width="62" Click="btnReload_Click" Background="{x:Null}" Height="55" Opacity="0.01"/>
         <Button x:Name="btnPlayPause" Content="Play/Pause" HorizontalAlignment="Left" Margin="61,65,0,0" VerticalAlignment="Top" Width="71" Click="btnPlayPause_Click" RenderTransformOrigin="1,0.5" Height="55" Background="{x:Null}" Opacity="0.01"/>
     </Grid>

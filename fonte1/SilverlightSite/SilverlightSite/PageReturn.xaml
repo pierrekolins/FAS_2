@@ -1,0 +1,15 @@
+﻿<navigation:Page x:Class="SilverlightSite.PageReturn" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           Width="1366" Height="768"
+           Title="PageReturn Page">
+    <Grid x:Name="LayoutRoot">
+        <Image HorizontalAlignment="Left" Height="158" Margin="34,579,0,0" VerticalAlignment="Top" Width="200" Source="imagem/menu.png"/>
+        <Button x:Name="btnPrincipal" HorizontalAlignment="Left" Height="130" Margin="47,592,0,0" VerticalAlignment="Top" Width="136" Opacity="0.01" Click="btnPrincipal_Click"/>
+
+    </Grid>
+</navigation:Page>

@@ -1,28 +1,23 @@
-﻿<UserControl x:Class="SilverlightSite.MainPage"
+﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="SilverlightSite.MainPage"
     mc:Ignorable="d"
     Height="768" Width="1366" >
-    
-    <Grid x:Name="LayoutRoot" >              
+
+    <Grid x:Name="LayoutRoot" >
         <Grid.Background>
             <ImageBrush ImageSource="imagem/bg-intro-circles.jpg"/>
-            
+
         </Grid.Background>
+        <sdk:Label x:Name="lbAcesse" Height="50" Canvas.Left="574" Canvas.Top="456" Content="Acesse o Sistema" FontSize="36" Foreground="#FFF3EDED" Margin="515,481,531,237" FontFamily="Comic Sans MS"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="820,273,0,0" VerticalAlignment="Top" Width="546" Height="167" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0.01"/>
-        <Canvas x:Name="Cover" Height="768" Width="1366" Background="#FF131212" Opacity="0.01" >
-           
-        </Canvas>
-        <Image Canvas.Left="92" Canvas.Top="616" Source="imagem/menu.png" Margin="-53,550,1122,10">
-            <Image.OpacityMask>
-                <ImageBrush Stretch="Fill" ImageSource="imagem/menu.png"/>
-            </Image.OpacityMask>
-        </Image>
-        <Button x:Name="btnPrincipal" Content="Button" HorizontalAlignment="Left" Height="182" Margin="0,576,0,0" VerticalAlignment="Top" Width="203" Opacity="0.01" Click="btnPrincipal_Click"/>
+        <Image x:Name="imagemInicial" HorizontalAlignment="Left" Height="203" Margin="567,273,0,0" VerticalAlignment="Top" Width="208" Source="imagem/inicial.png"/>
+        <Canvas x:Name="Cover" Height="768" Width="1366" Background="#FF131212" Opacity="0.01" Margin="10,-22,-10,22" />
     </Grid>
-    
+
 
 </UserControl>
 

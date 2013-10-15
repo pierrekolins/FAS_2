@@ -1,0 +1,44 @@
+﻿<navigation:Page     
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" x:Class="SilverlightSite.Page5"
+           mc:Ignorable="d" 
+           Height="768" Width="1366"
+           xmlns:local="clr-namespace:SilverlightSite"
+    Title="Page5 Page" >
+    <Grid x:Name="LayoutProf" RenderTransformOrigin="0.507,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <DataTemplate x:Key="CBTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Width="50" Height="50" 
+                        Source="{Binding Foto}" Stretch="Fill"/>
+                    <TextBlock Grid.Column="1" Text="{Binding Title}" 
+                        Margin="10" HorizontalAlignment="Left" FontSize="20"/>
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <ComboBox x:Name="CB1" ItemTemplate="{StaticResource CBTemplate}" ItemsSource="{Binding}" Margin="200,127,909,190" SelectionChanged="CB1_SelectionChanged" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="200,58,0,0" VerticalAlignment="Top" Width="265" FontSize="24" Content="Visualizar Professor" Foreground="#FFF5EBEB"/>
+        <Grid  x:Name="GridAux" HorizontalAlignment="Left" Height="248" Margin="200,318,0,0" VerticalAlignment="Top" Width="448" Grid.RowSpan="2">
+            <sdk:Label HorizontalAlignment="Left" Height="28" Margin="120,24,0,196" VerticalAlignment="Center" Width="295" Content="Marco Aurélio de Souza Mendes" Foreground="#FFF5EBEB" FontSize="18"/>
+            <sdk:Label HorizontalAlignment="Left" Height="113" Margin="10,125,0,10" VerticalAlignment="Center" Width="407" Content="Disciplinas:&#xD;&#xA;Laboratório de Engenharia de Software I&#xD;&#xA;Fundamentos de Arquitetura de Software I&#xD;&#xA;Fundamentos de Arquitetura de Software II" Foreground="#FFF7F0F0" FontSize="18"/>
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="imagem/marco.jpg"/>
+        </Grid>
+        <Grid  x:Name="GridAux2" HorizontalAlignment="Left" Height="297" Margin="200,293,0,0" VerticalAlignment="Top" Width="448" Grid.RowSpan="2">
+            <sdk:Label HorizontalAlignment="Left" Height="28" Margin="120,24,0,196" VerticalAlignment="Center" Width="295" Content="Pasteur Ottoni de Miranda Junior" Foreground="#FFF5EBEB" FontSize="18"/>
+            <sdk:Label HorizontalAlignment="Left" Height="159" Margin="8,128,0,10" VerticalAlignment="Center" Width="407" Content="Disciplinas:&#xD;&#xA;Construção e Implantação de Software I&#xD;&#xA;Construção e Implantação de Software II&#xD;&#xA;Laboratório de Engenharia de Software II&#xD;&#xA;Laboratório de Engenharia de Software III" Foreground="#FFF7F0F0" FontSize="18"/>
+            <Image x:Name ="foto2" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="imagem/pasteur.png"/>
+        </Grid>
+    </Grid>
+</navigation:Page>

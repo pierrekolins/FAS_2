@@ -6,6 +6,7 @@
     <AssemblyPart x:Name="System.Windows.Controls.Data.Input" Source="System.Windows.Controls.Data.Input.dll" />
     <AssemblyPart x:Name="system.windows.controls.datavisualization.toolkit" Source="system.windows.controls.datavisualization.toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Input" Source="System.Windows.Controls.Input.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.Navigation" Source="System.Windows.Controls.Navigation.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.Toolkit" Source="System.Windows.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Data" Source="System.Windows.Data.dll" />
