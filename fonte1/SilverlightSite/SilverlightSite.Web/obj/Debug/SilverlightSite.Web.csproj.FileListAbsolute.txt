@@ -1,0 +1,5 @@
+C:\Users\Pierre\Desktop\Trabalho FAS II\fonte1\SilverlightSite\SilverlightSite.Web\bin\SilverlightSite.Web.dll
+C:\Users\Pierre\Desktop\Trabalho FAS II\fonte1\SilverlightSite\SilverlightSite.Web\bin\SilverlightSite.Web.pdb
+C:\Users\Pierre\Desktop\Trabalho FAS II\fonte1\SilverlightSite\SilverlightSite.Web\obj\Debug\SilverlightSite.Web.csprojResolveAssemblyReference.cache
+C:\Users\Pierre\Desktop\Trabalho FAS II\fonte1\SilverlightSite\SilverlightSite.Web\obj\Debug\SilverlightSite.Web.dll
+C:\Users\Pierre\Desktop\Trabalho FAS II\fonte1\SilverlightSite\SilverlightSite.Web\obj\Debug\SilverlightSite.Web.pdb

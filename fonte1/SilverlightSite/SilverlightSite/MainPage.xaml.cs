@@ -14,19 +14,32 @@ namespace SilverlightSite
 {
     public partial class MainPage : UserControl
     {
+
+        Page6 _carrossel;
         public MainPage()
         {
             InitializeComponent();
+
+            // add the controls to the back
+            _carrossel = new Page6();
+            LayoutRoot.Children.Insert(0, _carrossel);
+
+            // click para remover o cover
+            Cover.MouseLeftButtonDown += new MouseButtonEventHandler(Cover_MouseLeftButtonDown);
+          
         }
 
-        private void btnVideo_Click(object sender, RoutedEventArgs e)
+        void Cover_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //MessageBox.Show("Thank you for your feedback");
-            Page1 pg = new Page1();
+            LayoutRoot.Children.Remove(Cover);
+            _carrossel.Start();
+        }
 
+        private void btnPrincipal_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mp = new MainPage();
             LayoutRoot.Children.Clear();
-
-            LayoutRoot.Children.Add(pg);
+            LayoutRoot.Children.Add(mp);
         }
 
     }
